@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_small">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_cocktail"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_margin="@dimen/margin_normal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_cocktail"
+            app:layout_constraintEnd_toEndOf="@+id/img_cocktail"
+            app:layout_constraintStart_toStartOf="@+id/img_cocktail"
+            app:layout_constraintTop_toTopOf="@+id/img_cocktail" />
+        <TextView
+            android:id="@+id/txt_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:maxLines="1"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txt_descripcion"
+            app:layout_constraintEnd_toStartOf="@+id/imgFav"
+            app:layout_constraintStart_toEndOf="@+id/img_cocktail"
+            app:layout_constraintTop_toTopOf="@+id/img_cocktail"
+            tools:text="Margarita" />
+
+        <TextView
+            android:id="@+id/txt_descripcion"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/img_cocktail"
+            app:layout_constraintEnd_toEndOf="@+id/txt_titulo"
+            app:layout_constraintStart_toStartOf="@+id/txt_titulo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_titulo"
+            tools:text="Margarita con ingredientes: vodka, soda, limon" />
+
+
+        <TextView
+            android:id="@+id/tvSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:text="Alcohol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_titulo" />
+
+        <ImageView
+            android:id="@+id/imgFav"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_favorite_24"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
+            app:layout_constraintEnd_toStartOf="@+id/tvSource" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="start|center"
+            android:checked="false"
+            android:clickable="false"
+            android:textIsSelectable="false"
+            app:layout_constraintBottom_toBottomOf="@+id/img_cocktail"
+            app:layout_constraintEnd_toEndOf="@+id/tvSource"
+            app:layout_constraintStart_toStartOf="@+id/tvSource"
+            app:layout_constraintTop_toBottomOf="@+id/tvSource" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvSource"
+            app:layout_constraintStart_toStartOf="@+id/img_cocktail"
+            app:layout_constraintTop_toBottomOf="@+id/img_cocktail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

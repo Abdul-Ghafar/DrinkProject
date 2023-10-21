@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.drinksapp.ui.home.HomeFragment"
+        android:label="Drinks Recipe"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_mainFragment_to_drinkDetailFragment"
+            app:destination="@id/detailFragment">
+            <!--
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"-->
+            <argument
+                android:name="drink"
+                app:argType="com.example.drinksapp.data.model.Cocktail"
+                app:nullable="false" />
+        </action>
+        <action
+            android:id="@+id/action_mainFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment"
+             />
+
+        <!--app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"-->
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.drinksapp.ui.drinkdetails.DrinkDetailsFragment"
+        android:label="Drink Detail"
+        tools:layout="@layout/fragment_drink_details">
+
+        <argument
+            android:name="drink"
+            app:argType="com.example.drinksapp.data.model.Cocktail"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.drinksapp.ui.favorites.FavoritesFragment"
+        android:label="Favorite Drinks"
+        tools:layout="@layout/favorite_fragment">
+        <action
+            android:id="@+id/action_favoritosFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:popUpTo="@id/favouriteFragment">
+
+            <argument
+                android:name="drink"
+                app:argType="com.example.drinksapp.data.model.Cocktail"
+                app:nullable="false" />
+        </action>
+    </fragment>
+</navigation>
