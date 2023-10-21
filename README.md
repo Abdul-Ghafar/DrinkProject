@@ -1,13 +1,10 @@
 # DrinkApp
-Clean architecture app  built with
-- Coroutines ,
-- MVVM
-- Dagger Hilt
-- Retrofit
-- Room
-- Navigation Components
-- Cache Strategy (Repository Pattern)
-- Coroutines Flow
-- ViewBinding
-
+Clean Code 
+Mvvm
+Room
+Retrofit
+Hilt injection
+Repository cache strategy
+Jectpack Navigation
+viewbinding
 
