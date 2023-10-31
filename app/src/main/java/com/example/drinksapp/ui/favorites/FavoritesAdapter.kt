@@ -16,7 +16,7 @@ import com.example.drinksapp.R
 import com.example.drinksapp.core.BaseViewHolder
 import com.example.drinksapp.data.model.Cocktail
 import com.example.drinksapp.databinding.RowDrinksBinding
-import kotlinx.android.synthetic.main.row_drinks.view.*
+import kotlinx.android.synthetic.main.row_drinks.view.imgFav
 
 
 class FavoritesAdapter(
@@ -71,10 +71,10 @@ class FavoritesAdapter(
     ) : BaseViewHolder<Cocktail>(binding.root) {
         override fun bind(item: Cocktail): Unit = with(binding) {
 
-            checkBox2.isChecked = item.hasAlcohol.equals("Alcoholic", ignoreCase = true)
+            checkBoxAlcohol.isChecked = item.hasAlcohol.equals("Alcoholic", ignoreCase = true)
 
-            txtTitulo.text = item.name
-            txtDescripcion.text = item.description
+            txtTitle.text = item.name
+            txtDescription.text = item.description
 
 
             Glide.with(context)

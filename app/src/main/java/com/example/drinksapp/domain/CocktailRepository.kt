@@ -6,9 +6,6 @@ import com.example.drinksapp.data.model.Cocktail
 import com.example.drinksapp.data.model.CocktailEntity
 import kotlinx.coroutines.flow.Flow
 
-/**
- * Created by Gastón Saillén on 16 July 2020
- */
 interface CocktailRepository {
     suspend fun getCocktailByName(cocktailName: String): Flow<Resource<List<Cocktail>>>
     suspend fun getCocktailByFirstLetter(cocktailFirstLetter: String): Flow<Resource<List<Cocktail>>>
@@ -19,5 +16,4 @@ interface CocktailRepository {
     suspend fun saveCocktail(cocktail: CocktailEntity)
     fun getFavoritesCocktails(): LiveData<List<Cocktail>>
     suspend fun deleteFavoriteCocktail(cocktail: Cocktail)
-
 }

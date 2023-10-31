@@ -1,23 +1,20 @@
 package com.example.drinksapp.ui
 
+
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.drinksapp.R
-import com.example.drinksapp.di.ToastHelper
+import com.example.drinksapp.core.observe
 import com.example.drinksapp.databinding.ActivityMainBinding
+import com.example.drinksapp.di.ToastHelper
 import com.example.drinksapp.utils.hide
 import com.example.drinksapp.utils.show
-import com.example.drinksapp.utils.showIf
 import com.example.drinksapp.utils.showToast
-import com.g.tragosapp.core.observe
-
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

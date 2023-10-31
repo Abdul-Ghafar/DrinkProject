@@ -59,11 +59,11 @@ class HomeFragment : Fragment(R.layout.fragment_home),
 
                         is Resource.Success -> {
                             if (result.data.isEmpty()) {
-                                binding.rvTragos.hide()
+                                binding.rvDrinks.hide()
                                 binding.emptyContainer.root.show()
                                 return@Observer
                             }
-                            binding.rvTragos.show()
+                            binding.rvDrinks.show()
                             homeAdapter.setCocktailList(result.data)
                             binding.emptyContainer.root.hide()
                         }
@@ -96,11 +96,11 @@ class HomeFragment : Fragment(R.layout.fragment_home),
 
                         is Resource.Success -> {
                             if (result.data.isEmpty()) {
-                                binding.rvTragos.hide()
+                                binding.rvDrinks.hide()
                                 binding.emptyContainer.root.show()
                                 return@Observer
                             }
-                            binding.rvTragos.show()
+                            binding.rvDrinks.show()
                             homeAdapter.setCocktailList(result.data)
                             binding.emptyContainer.root.hide()
                         }
@@ -120,8 +120,8 @@ class HomeFragment : Fragment(R.layout.fragment_home),
         binding.searchView.setQuery(viewModelName.currentCocktailName.value.toString(),false)
         binding.radioName.isChecked=true
 
-        binding.rvTragos.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvTragos.adapter = homeAdapter
+        binding.rvDrinks.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvDrinks.adapter = homeAdapter
 
 
         binding.searchView.onQueryTextChanged {

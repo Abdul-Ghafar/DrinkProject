@@ -1,22 +1,21 @@
 package com.example.drinksapp.di
 
+//import dagger.hilt.android.components.ApplicationComponent
 import android.content.Context
 import androidx.room.Room
-import com.example.drinksapp.utils.AppConstants.BASE_URL
-import com.example.drinksapp.utils.AppConstants.DATABASE_NAME
 import com.example.drinksapp.data.local.AppDatabase
 import com.example.drinksapp.data.remote.WebService
+import com.example.drinksapp.utils.AppConstants.BASE_URL
+import com.example.drinksapp.utils.AppConstants.DATABASE_NAME
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-//import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
-
 
 
 @Module

@@ -1,4 +1,4 @@
-package com.g.tragosapp.core
+package com.example.drinksapp.core
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver

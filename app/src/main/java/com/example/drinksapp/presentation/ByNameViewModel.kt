@@ -1,11 +1,17 @@
 package com.example.drinksapp.presentation
 
 import android.util.Log
-import androidx.lifecycle.*
-import com.example.drinksapp.di.ToastHelper
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.distinctUntilChanged
+import androidx.lifecycle.liveData
+import androidx.lifecycle.map
+import androidx.lifecycle.switchMap
+import androidx.lifecycle.viewModelScope
 import com.example.drinksapp.core.Resource
-import com.example.drinksapp.domain.CocktailRepository
 import com.example.drinksapp.data.model.Cocktail
+import com.example.drinksapp.di.ToastHelper
+import com.example.drinksapp.domain.CocktailRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect

@@ -3,11 +3,13 @@ package com.example.drinksapp.data.local
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
 import com.example.drinksapp.core.Resource
-import com.example.drinksapp.data.model.*
+import com.example.drinksapp.data.model.Cocktail
+import com.example.drinksapp.data.model.CocktailEntity
+import com.example.drinksapp.data.model.asCocktailList
+import com.example.drinksapp.data.model.asDrinkList
+import com.example.drinksapp.data.model.asFavoriteEntity
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import javax.inject.Inject
-
-
 
 @ExperimentalCoroutinesApi
 class LocalDataSource @Inject constructor(private val cocktailDao: CocktailDao) {

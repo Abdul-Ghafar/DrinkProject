@@ -60,7 +60,7 @@ class HomeAdapter(
         val binding: RowDrinksBinding
     ) : BaseViewHolder<Cocktail>(binding.root) {
         override fun bind(item: Cocktail): Unit = with(binding) {
-            checkBox2.isChecked = item.hasAlcohol.equals("Alcoholic", ignoreCase = true)
+            checkBoxAlcohol.isChecked = item.hasAlcohol.equals("Alcoholic", ignoreCase = true)
 
             imgFav.visibility=View.GONE
 
@@ -68,8 +68,8 @@ class HomeAdapter(
                 .load(item.image)
                 .into(imgCocktail)*/
 
-            txtTitulo.text = item.name
-            txtDescripcion.text = item.description
+            txtTitle.text = item.name
+            txtDescription.text = item.description
 
             Glide.with(context)
                 .load(item.image.trim())

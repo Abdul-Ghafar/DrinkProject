@@ -21,7 +21,7 @@ interface CocktailDao {
     suspend fun getCocktailsByFirstLetter(cocktailName: String): List<CocktailEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveFavoriteCocktail(trago: FavoritesEntity)
+    suspend fun saveFavoriteCocktail(favouriteDrink: FavoritesEntity)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveCocktail(cocktail: CocktailEntity)
